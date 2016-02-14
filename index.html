@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="la">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>mizutaki</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="lib/bootstrap.css">
+  <link rel="stylesheet" href="lib/style.css">
+  <link rel="stylesheet" href="lib/svg.css">
+  <script src="lib/jquery-2.1.4.min.js"></script>
+  <script src="lib/d3/d3.min.js"></script>
+</head>
+<body>
+  <div id="split-container">
+    <div id="graph-container">
+      <div id="graph"></div>
+    </div>
+    <div id="docs-container">
+      <a id="docs-close" href="#">&times;</a>
+      <div id="docs" class="docs"></div>
+    </div>
+  </div>
+  <script src="lib/colorbrewer.js"></script>
+  <script src="lib/geometry.js"></script>
+    <script>
+    // load config.json
+    d3.json('config.json', function(data) {
+        data.config.jsonUrl = "data.json";
+        config = data.config;
+    });
+    </script>
+    <script src="lib/script.js"></script>
+  <script src="lib/mizutaki.js"></script>
+</body>
+</html>

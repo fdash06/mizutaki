@@ -1,0 +1,78 @@
+.link {
+    fill: none;
+    /* set by d3
+    stroke: #666;
+    stroke-width: 1.5px;
+    */
+    opacity: .7;
+    marker-end: url(#end);
+    
+    transition: opacity 250ms;
+    -webkit-transition: opacity 250ms;
+    -moz-transition: opacity 250ms;
+}
+
+marker#end {
+    fill: #666;
+    stroke: #666;
+    stroke-width: 1.5px;
+}
+
+.node rect {
+    stroke-width: 1.5px;
+    
+    transition: opacity 250ms;
+    -webkit-transition: opacity 250ms;
+    -moz-transition: opacity 250ms;
+}
+
+.node text {
+    fill: #000;
+    pointer-events: none;
+}
+
+.node .valueText {
+    fill: #ff0000;
+    font: 20px sans-serif;
+    pointer-events: none;
+}
+
+.node .negativeTerm {
+    fill: #F3604F;
+}
+.node .positiveTerm {
+    fill: #08C2FB;
+}
+
+.node.selected rect {
+    filter: url(#blue-glow);
+}
+
+.link.inactive,
+.node.inactive rect,
+.node.inactive text {
+    opacity: .2;
+}
+
+.node.inactive.selected rect,
+.node.inactive.selected text {
+    opacity: .6;
+}
+
+.legend {
+    position: fixed;
+}
+
+.legend .category rect {
+    stroke-width: 1px;
+}
+
+.legend .category text {
+    fill: #000;
+    font: 10px sans-serif;
+    pointer-events: none;
+}
+
+.lineLabel{
+    fill: #f44;
+}
